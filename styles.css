@@ -2,7 +2,12 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Manrope", sans-serif;
+  /*
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Jura', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  */
   font-size: 18px;
 }
 
@@ -18,6 +23,7 @@ h3 {
 
 p {
   margin: 0;
+  font-family: "DM Sans", sans-serif;
 }
 
 ul {
@@ -70,10 +76,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: bold;
 }
 
 .navbar .nav-items {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -91,19 +98,26 @@ header {
 
 .button {
   display: block;
-  border: 3px solid;
+  border: 2px solid transparent;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
   border-radius: 1.5rem;
   padding: 0.5rem 1rem;
-  background-color: transparent;
-  border-color: #6e07f3;
-  color: #6e07f3;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(101deg, #ed5566, #ee55dc, #9c5bf1);
+  background-origin: border-box;
+  color: #fff;
   align-self: flex-end;
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .button:hover {
-  background-color: #6e07f3;
-  color: white;
+  box-shadow: 2px 1000px 1px #f1f3fa inset !important;
+  color: #000;
 }
 
 .dropdown_menu {
@@ -139,6 +153,8 @@ header {
     display: block;
     left: 2rem;
     width: unset;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
   }
 }
 
@@ -175,7 +191,7 @@ section#hero {
 }
 
 h1 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Jura", sans-serif;
   font-size: 3rem;
   color: #141c3a;
   margin: 0;
@@ -183,6 +199,7 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
+  font-weight: 300;
 }
 
 .hero-content {
@@ -197,7 +214,7 @@ h2 {
   flex-grow: 1;
   flex-shrink: 0;
   padding: 3rem 1.5rem;
-  font-family: "Abril Fatface", serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .avatar {
@@ -228,6 +245,11 @@ h2 {
   text-align: center;
   display: block;
   padding: 5rem 0 13rem;
+}
+
+.about h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 .about p {
@@ -262,7 +284,8 @@ h2 {
 .skills-content {
   padding: 2rem 1rem;
   color: #141c3a;
-  font-family: "Open Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
 }
 
 .skills-content:nth-child(2) {
@@ -287,8 +310,9 @@ h2 {
 }
 
 .content-title {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.3rem;
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
   color: #141c3a;
   margin-bottom: 1rem;
 }
