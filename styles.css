@@ -2,12 +2,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*
-  font-family: 'DM Sans', sans-serif;
-  font-family: 'Jura', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  */
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
 }
 
@@ -27,6 +22,7 @@ p {
 }
 
 ul {
+  font-family: "DM Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -79,7 +75,6 @@ header {
 }
 
 .navbar .nav-items {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   display: flex;
   gap: 2rem;
@@ -153,7 +148,6 @@ header {
     display: block;
     left: 2rem;
     width: unset;
-    font-family: "Montserrat", sans-serif;
     font-weight: 500;
   }
 }
@@ -198,6 +192,7 @@ h1 {
 }
 
 h2 {
+  font-family: "DM Sans", sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
 }
@@ -214,7 +209,6 @@ h2 {
   flex-grow: 1;
   flex-shrink: 0;
   padding: 3rem 1.5rem;
-  font-family: "DM Sans", sans-serif;
 }
 
 .avatar {
