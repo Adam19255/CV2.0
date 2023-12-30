@@ -1,14 +1,28 @@
-* {
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 18px;
 }
 
 body {
-  height: 100vh;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -22,7 +36,6 @@ a:hover {
 
 li {
   list-style: none;
-  font-size: 1rem;
 }
 
 header {
@@ -30,7 +43,24 @@ header {
   padding: 0 2rem;
 }
 
+/* Container */
+
+.container {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
 /* Navbar */
+
+.logo a {
+  display: block;
+  transition: transform 0.2s linear;
+}
+
+.logo a:hover {
+  transform: scale(1.1);
+}
 
 .navbar {
   width: 100%;
@@ -40,11 +70,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: bold;
 }
 
 .navbar .nav-items {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .navbar .toggle_btn {
@@ -58,10 +90,10 @@ header {
 }
 
 .button {
+  display: block;
   border: 3px solid;
-  border-radius: 27px;
-  font-size: 18px;
-  padding: 10px 20px;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
   background-color: transparent;
   border-color: #6e07f3;
   color: #6e07f3;
@@ -120,8 +152,8 @@ header {
 /* Hero computer image */
 
 img.is-bottom {
-  height: auto;
   max-width: 100%;
+  display: block;
 }
 
 @media (min-width: 769px) {
@@ -134,20 +166,31 @@ img.is-bottom {
 /* Hero main description and image */
 
 section#hero {
-  height: calc(100vh - 700px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 960px;
-  margin: 150px auto; /* Center the hero section horizontally */
+  margin: 0 auto; /* Center the hero section horizontally */
 }
 
-#hero h1 {
+h1 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
-  margin-bottom: 1rem;
   color: #141c3a;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .hero-body {
@@ -159,22 +202,8 @@ section#hero {
 
 .avatar {
   margin: 2rem 0;
-  width: 150px;
-}
-
-@media (min-width: 769px) {
-  .hero-body {
-    padding: 3rem 3rem;
-  }
-
-  .avatar {
-    width: 210px;
-    margin: 2rem 0;
-  }
-
-  #hero h1 {
-    font-size: 2.5rem;
-  }
+  width: 10rem;
+  height: 10rem;
 }
 
 @media (max-width: 768px) {
@@ -182,51 +211,93 @@ section#hero {
     padding: 3rem 3rem;
   }
 
-  #hero h1 {
+  h1 {
     font-size: 2rem;
   }
-}
 
-/* Container */
-
-.container {
-  flex-grow: 1;
-  margin: 0 auto;
-  position: relative;
-  width: auto;
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1200px;
+  h2 {
+    font-size: 1.3rem;
   }
 }
 
 /* About */
 
 .about {
-  padding: 5rem 1.5rem;
   background-color: #6e07f3;
   color: white;
   text-align: center;
   display: block;
-  padding-bottom: 14rem;
+  padding: 5rem 0 13rem;
 }
 
-@media (min-width: 1216px) {
-  .about {
-    padding-bottom: 18rem;
-  }
+.about p {
+  display: inline-block;
+  margin: 2rem auto 0;
+  width: 50%;
 }
 
-@media (min-width: 1024px) {
-  .about {
-    padding: 9rem 4.5rem;
-  }
+/* Skills */
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 7rem;
 }
 
-@media (min-width: 769px) {
-  .about {
-    padding-bottom: 16rem;
-  }
+.skills-wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
+  margin-top: -8rem;
+}
+
+.skills-content {
+  padding: 2rem 1rem;
+  color: #141c3a;
+  font-family: "Open Sans", sans-serif;
+}
+
+.skills-content:nth-child(2) {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.content-image {
+  width: 4rem;
+  height: 4rem;
+  padding: 0.8rem;
+  background-color: #5be9b9;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.content-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.content-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  color: #141c3a;
+  margin-bottom: 1rem;
+}
+
+.content-subtitle {
+  margin-bottom: 1rem;
+  color: #6e07f3;
+}
+
+.title-description {
+  margin-bottom: 2rem;
 }

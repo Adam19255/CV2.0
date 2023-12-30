@@ -26,6 +26,13 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-- Font 3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
     <title>Adam Shay | Software Engineer</title>
@@ -60,13 +67,15 @@
       <section id="hero">
         <div class="hero-body">
           <div class="container">
-            <h1>I'm Adam.</h1>
-            <h2>a programming student.</h2>
-            <img
-              class="avatar"
-              src="assets/profile-pic.png"
-              alt="profile image"
-            />
+            <div class="hero-content">
+              <h1>I'm Adam.</h1>
+              <h2>a programming student.</h2>
+              <img
+                class="avatar"
+                src="assets/profile-pic.png"
+                alt="profile image"
+              />
+            </div>
           </div>
         </div>
         <div class="hero-foot">
@@ -81,33 +90,91 @@
       </section>
 
       <section class="about">
-        <div class="container"></div>
-        <div class="is-centered">
-          <div class="is-three-fifths">
-            <h1>Hi, I'm Adam. Nice to meet you.</h1>
+        <div class="container">
+          <div class="about-content">
+            <h2>Hi, I'm Adam. Nice to meet you.</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Aspernatur quo voluptate dolor, in corporis animi nesciunt odit
+              quae dicta. Vero, asperiores esse nulla perferendis adipisci
+              voluptas dolores minus est aliquam.
+            </p>
           </div>
         </div>
       </section>
+
+      <section class="skills">
+        <div class="container">
+          <div class="skills-wrapper">
+            <div class="skills-content">
+              <div class="content-image">
+                <img src="assets/code.svg" alt="code" />
+              </div>
+              <div class="content-title">Programmer</div>
+              <p class="title-description">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel,
+                repudiandae?
+              </p>
+              <div class="content-subtitle">Languages I speak:</div>
+              <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 3</li>
+                <li>item 3</li>
+                <li>item 3</li>
+              </ul>
+            </div>
+
+            <div class="skills-content">
+              <div class="content-image">
+                <img src="assets/book.svg" alt="book" />
+              </div>
+              <div class="content-title">Student</div>
+              <p class="title-description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
+                doloremque?
+              </p>
+              <div class="content-subtitle">Things I learnt:</div>
+              <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+              </ul>
+            </div>
+
+            <div class="skills-content">
+              <div class="content-image">
+                <img src="assets/gears.svg" alt="gears" />
+              </div>
+              <div class="content-title">Problem Solver</div>
+              <p class="title-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ducimus, eveniet.
+              </p>
+              <div class="content-subtitle">How I solve problems:</div>
+              <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Portfolio">
+        <h2>My Recent Work</h2>
+        <p>Here are some of the things I worked on.</p>
+        <div class="portfolio-card">work 1</div>
+        <div class="portfolio-card">work 2</div>
+        <div class="portfolio-card">work 3</div>
+        <a class="button" href=""
+          ><i class="fa-brands fa-github"></i> See more on GitHub</a
+        >
+      </section>
     </main>
 
-    <script>
-      const toggleBtn = document.querySelector(".toggle_btn");
-      const toggleBtnIcon = document.querySelector(".toggle_btn i");
-      const dropDownMenu = document.querySelector(".dropdown_menu");
-      const mainSection = document.querySelector("main");
-
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle("open");
-        const isOpen = dropDownMenu.classList.contains("open");
-
-        toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-
-        // Adjust main section margin-top based on the navbar height
-        const navbarHeight = document.querySelector(".navbar").offsetHeight;
-        mainSection.style.marginTop = isOpen ? navbarHeight + 30 + "px" : "0";
-      };
-    </script>
+    <script src="./main.js"></script>
   </body>
 </html>
