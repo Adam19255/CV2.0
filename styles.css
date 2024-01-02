@@ -38,6 +38,7 @@ a:hover {
 
 li {
   list-style: none;
+  line-height: 1.5;
 }
 
 header {
