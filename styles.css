@@ -290,7 +290,7 @@ h2 {
 .about p {
   display: inline-block;
   margin: 2rem auto 0;
-  width: 50%;
+  width: 60%;
 }
 
 /* Skills */
@@ -490,11 +490,11 @@ h2 {
 
   .portfolio-card {
     width: 100%;
-    pointer-events: none;
+    font-weight: 200;
   }
 
   .card-overlay {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 
