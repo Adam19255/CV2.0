@@ -35,6 +35,19 @@ h3 {
   margin: 0;
 }
 
+h1 {
+  font-family: "Jura", sans-serif;
+  font-size: 3rem;
+  color: #141c3a;
+  margin: 0;
+}
+
+h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
 p {
   margin: 0;
   font-family: "DM Sans", sans-serif;
@@ -49,6 +62,7 @@ ul {
 a {
   text-decoration: none;
   color: black;
+  transition: color 0.2s linear;
 }
 a:hover {
   color: #6e07f3;
@@ -126,6 +140,9 @@ header {
     z-index: 99;
   }
 }
+.navbar .nav-items.flex {
+  display: flex !important;
+}
 @media only screen and (max-width: 1023px) {
   .navbar .nav-items .button {
     all: unset;
@@ -165,41 +182,19 @@ header {
   }
 }
 
-/* Hero computer image */
-img.is-bottom {
-  max-width: 100%;
+.hero-img {
   display: block;
+  max-width: 100%;
 }
 
-@media (min-width: 769px) {
-  .hero-foot img.is-bottom {
-    margin-bottom: 0;
-    max-width: 100%;
-  }
-}
-/* Hero main description and image */
-section#hero {
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 960px;
-  margin: 0 auto; /* Center the hero section horizontally */
+  margin: 0 auto;
 }
-
-h1 {
-  font-family: "Jura", sans-serif;
-  font-size: 3rem;
-  color: #141c3a;
-  margin: 0;
-}
-
-h2 {
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-}
-
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -207,31 +202,28 @@ h2 {
   justify-content: center;
   gap: 1rem;
 }
-
 .hero-body {
   flex-grow: 1;
   flex-shrink: 0;
   padding: 3rem 1.5rem;
 }
-
-.avatar {
+.hero .avatar {
   margin: 2rem 0;
   width: 10rem;
   height: 10rem;
 }
-
-@media (max-width: 768px) {
-  .hero-body {
+@media only screen and (max-width: 767px) {
+  .hero .hero-body {
     padding: 3rem 3rem;
   }
-  h1 {
+  .hero h1 {
     font-size: 2rem;
   }
-  h2 {
+  .hero h2 {
     font-size: 1.3rem;
   }
 }
-/* About */
+
 .about {
   background-color: #6e07f3;
   color: white;
@@ -239,23 +231,19 @@ h2 {
   display: block;
   padding: 5rem 0 15rem;
 }
-
 .about h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
-
 .about p {
   display: inline-block;
   margin: 2rem auto 0;
   width: 60%;
 }
 
-/* Skills */
 .skills {
   margin-bottom: 7rem;
 }
-
 .skills-wrapper {
   margin: 0;
   display: flex;
@@ -268,20 +256,29 @@ h2 {
   box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
   margin-top: -10rem;
 }
-
+@media only screen and (max-width: 1023px) {
+  .skills-wrapper {
+    flex-direction: column;
+  }
+}
 .skills-content {
   padding: 2rem 1rem;
   color: #141c3a;
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
 }
-
 .skills-content:nth-child(2) {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
   border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
-
-.content-image {
+@media only screen and (max-width: 1023px) {
+  .skills-content:nth-child(2) {
+    border: unset;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+.skills-content .content-image {
   width: 6rem;
   height: 6rem;
   padding: 0.8rem;
@@ -291,44 +288,32 @@ h2 {
   margin: auto;
   margin-bottom: 1rem;
 }
-
-.content-image img {
+.skills-content .content-image img {
   width: 100%;
   height: 100%;
 }
-
-.content-title {
+.skills-content .content-title {
   font-family: "Jura", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
   color: #141c3a;
   margin-bottom: 1rem;
 }
-
-.content-subtitle {
+.skills-content .content-subtitle {
   margin-bottom: 1rem;
   color: #6e07f3;
 }
-
-.title-description {
+.skills-content .title-description {
   margin-bottom: 2rem;
 }
 
-@media (max-width: 1024px) {
-  .skills-wrapper {
-    flex-direction: column;
-  }
-  .skills-content:nth-child(2) {
-    border: unset;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  }
-}
-/* Portfolio */
 .portfolio {
   text-align: center;
 }
-
+.portfolio > .container > .button {
+  display: inline-block;
+  margin: 2rem auto;
+}
 .portfolio .title {
   display: flex;
   flex-direction: column;
@@ -338,11 +323,9 @@ h2 {
   margin-bottom: 3rem;
   font-size: 1.2rem;
 }
-
 .portfolio .title h2 {
   font-weight: bold;
 }
-
 .portfolio-cards {
   display: flex;
   align-items: center;
@@ -350,7 +333,16 @@ h2 {
   flex-wrap: wrap;
   gap: 1rem;
 }
-
+@media only screen and (max-width: 767px) {
+  .portfolio-cards {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .portfolio-cards {
+    flex-wrap: wrap;
+  }
+}
 .portfolio-card {
   position: relative;
   overflow: hidden;
@@ -358,35 +350,40 @@ h2 {
   width: calc(33% - 1rem);
   height: 100%;
 }
-
+@media only screen and (max-width: 1023px) {
+  .portfolio-card {
+    width: calc(50% - 1rem);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .portfolio-card {
+    width: 100%;
+    font-weight: 200;
+  }
+}
+.portfolio-card:hover img {
+  scale: 1.2;
+}
+.portfolio-card:hover .image-wrapper .card-overlay {
+  opacity: 1;
+}
+.portfolio-card a {
+  transition: all 0.3s ease;
+}
+.portfolio-card p {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  transition: opacity 0.4s linear;
+}
+.portfolio-card a,
+.portfolio-card p {
+  color: white;
+}
 .portfolio-card .image-wrapper {
   position: relative;
   padding-top: 70%;
 }
-
-.portfolio-card img {
-  position: absolute;
-  display: block;
-  transition: scale 0.4s linear;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.portfolio-card:hover img {
-  scale: 1.2;
-}
-
-.card-wrapper {
-  width: 100%;
-}
-
-.card-overlay {
+.portfolio-card .image-wrapper .card-overlay {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -403,57 +400,27 @@ h2 {
   transition: opacity 0.4s linear;
   gap: 2rem;
 }
-
-.portfolio-card:hover .card-overlay {
-  opacity: 1;
+.portfolio-card img {
+  position: absolute;
+  display: block;
+  transition: scale 0.4s linear;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.portfolio-card a,
-.portfolio-card p {
-  color: white;
-  transition: opacity 0.4s linear;
-}
-
-.portfolio-card a {
-  transition: all 0.3s ease;
-}
-
-.portfolio-card p {
-  padding: 0 1rem;
-  font-size: 1.3rem;
-}
-
-.portfolio > .container > .button {
-  display: inline-block;
-  margin: 2rem auto;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .portfolio-cards {
-    flex-wrap: wrap;
-  }
-  .portfolio-card {
-    width: calc(50% - 1rem);
-  }
-}
-@media (max-width: 767px) {
-  .portfolio-cards {
-    flex-direction: column;
-  }
-  .portfolio-card {
-    width: 100%;
-    font-weight: 200;
-  }
-}
-/* Footer */
 .footer {
   text-align: center;
   background-color: #6e07f3;
   color: white;
   display: block;
-  padding: 5rem 0 10rem;
+  padding: 5rem 0 6rem;
 }
-
 .footer > .container > .button {
   display: inline-block;
   background-image: none;
@@ -461,19 +428,20 @@ h2 {
   border: 2px solid rgba(255, 255, 255, 0.5);
   margin: 2rem auto;
 }
-
 .footer > .container > .button:hover {
   background: #fff;
   box-shadow: 2px 1000px 1px #fff inset !important;
 }
-
-.social-icons {
+.footer p {
+  opacity: 0.8;
+  font-size: 1.5rem;
+}
+.footer .social-icons {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.social-icons .icon {
+.footer .social-icons .icon {
   width: 1rem;
   height: 1rem;
   padding: 0.8rem;
@@ -483,27 +451,22 @@ h2 {
   margin: 0 0.5rem;
   transition: all 0.2s linear;
 }
-
-.social-icons svg {
+.footer .social-icons .icon:hover {
+  background: #fff;
+}
+.footer .social-icons .icon:hover svg path {
+  fill: #6e07f3;
+}
+.footer .social-icons .icon:last-child:hover svg path,
+.footer .social-icons .icon:last-child:hover svg rect {
+  stroke: #6e07f3;
+  fill: unset;
+}
+.footer .social-icons svg {
   width: 100%;
   height: 100%;
 }
-
-.social-icons .icon:hover {
-  background: #fff;
-}
-
-.social-icons .icon svg path,
-.social-icons .icon svg rect {
+.footer .social-icons svg path,
+.footer .social-icons svg rect {
   transition: fill 0.2s linear, stroke 0.2s linear;
-}
-
-.social-icons .icon:hover svg path {
-  fill: #6e07f3;
-}
-
-.social-icons .icon:last-child:hover svg rect,
-.social-icons .icon:last-child:hover svg path {
-  stroke: #6e07f3;
-  fill: unset;
 }/*# sourceMappingURL=styles.css.map */
