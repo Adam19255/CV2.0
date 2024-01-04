@@ -1,15 +1,14 @@
-const toggleBtn = document.querySelector(".toggle_btn");
-const toggleBtnIcon = document.querySelector(".toggle_btn i");
-const dropDownMenu = document.querySelector(".dropdown_menu");
-const mainSection = document.querySelector("main");
+$(".hamburger").on("click", function (e) {
+  // prevents default behavior of the element
+  e.preventDefault();
+  $(this).toggleClass("open");
 
-toggleBtn.onclick = function () {
-  dropDownMenu.classList.toggle("open");
-  const isOpen = dropDownMenu.classList.contains("open");
+  $(".nav-items").slideToggle();
+  $(".overlay").toggleClass("darken");
+});
 
-  toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-
-  // Adjust main section margin-top based on the navbar height
-  const navbarHeight = document.querySelector(".navbar").offsetHeight;
-  mainSection.style.marginTop = isOpen ? navbarHeight + 30 + "px" : "0";
-};
+$(".nav-items li a, .overlay").on("click", function (e) {
+  $(".hamburger").removeClass("open");
+  $(".nav-items").slideUp();
+  $(".overlay").removeClass("darken");
+});

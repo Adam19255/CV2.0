@@ -23,25 +23,39 @@
     <title>Adam Shay | Software Engineer</title>
   </head>
   <body>
+    <div class="overlay"></div>
     <header>
       <div class="container">
         <div class="navbar">
           <div class="logo">
-            <a href="#"
-              ><img src="assets/A-letter.svg" height="50px" alt="latter a"
-            /></a>
+            <a href="#"><img src="assets/A-letter.svg" alt="letter a" /></a>
           </div>
           <ul class="nav-items">
-            <li><a href="hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a class="button" href="contact.html">Say Hello</a></li>
           </ul>
-          <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </div>
-        <div class="dropdown_menu">
-          <li><a href="hero">Home</a></li>
-          <li><a class="button" href="contact.html">Say Hello</a></li>
+          <a class="hamburger" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+            >
+              <path
+                d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z"
+              />
+              <path
+                d="M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z"
+              />
+              <path
+                d="M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </header>
@@ -72,7 +86,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about-content">
             <h2>Hi, I'm Adam. Nice to meet you.</h2>
@@ -85,7 +99,7 @@
         </div>
       </section>
 
-      <section class="skills">
+      <section class="skills" id="skills">
         <div class="container">
           <div class="skills-wrapper">
             <div class="skills-content">
@@ -130,7 +144,7 @@
                 <li>Operating Systems</li>
                 <li>Version Control</li>
                 <li>Debugging and Troubleshooting</li>
-                <li>SQLite</li>
+                <li>SQL</li>
                 <li>APIs</li>
               </ul>
             </div>
@@ -160,7 +174,7 @@
         </div>
       </section>
 
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
           <div class="title">
             <h2>My Recent Work</h2>
@@ -281,7 +295,7 @@
         </div>
       </section>
 
-      <section class="footer">
+      <section class="footer" id="footer">
         <div class="container">
           <p>
             Interested in working together?<br />
@@ -387,6 +401,7 @@
       </section>
     </main>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>

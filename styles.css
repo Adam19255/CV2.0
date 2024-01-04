@@ -4,10 +4,29 @@ html {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 body {
+  position: relative;
   margin: 0;
+}
+
+.overlay {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 9;
+  transition: opacity 0.2s linear;
+}
+.overlay.darken {
+  opacity: 1;
+  pointer-events: initial;
 }
 
 h1,
@@ -31,7 +50,6 @@ a {
   text-decoration: none;
   color: black;
 }
-
 a:hover {
   color: #6e07f3;
 }
@@ -41,12 +59,28 @@ li {
   line-height: 1.5;
 }
 
+.button {
+  display: inline-block;
+  border: 2px solid transparent;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(120deg, #ee55dc, #9c5bf1, #6e07f3);
+  background-origin: border-box;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  box-shadow: 2px 1000px 1px #f1f3fa inset;
+  color: #000;
+}
+
 header {
   position: relative;
   padding: 0 2rem;
 }
-
-/* Container */
 
 .container {
   max-width: 1400px;
@@ -54,113 +88,84 @@ header {
   margin: 0 auto;
 }
 
-/* Navbar */
-
 .logo a {
   display: block;
   transition: transform 0.2s linear;
 }
-
+.logo a img {
+  height: 2rem;
+}
 .logo a:hover {
   transform: scale(1.1);
 }
 
 .navbar {
-  width: 100%;
-  height: 150px;
-  max-width: 1200px;
-  margin: 0 auto;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 2rem;
 }
-
 .navbar .nav-items {
-  font-weight: 500;
   display: flex;
+  align-items: center;
   gap: 2rem;
-  align-items: center;
 }
-
-.navbar .toggle_btn {
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-}
-
-.navbar .toggle_btn:hover {
-  color: #6e07f3;
-}
-
-.button {
-  display: block;
-  border: 2px solid transparent;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-  border-radius: 1.5rem;
-  padding: 0.5rem 1rem;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ),
-    linear-gradient(120deg, #ee55dc, #9c5bf1, #6e07f3);
-  background-origin: border-box;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  box-shadow: 2px 1000px 1px #f1f3fa inset !important;
-  color: #000;
-}
-
-.dropdown_menu {
-  display: none;
-  position: absolute;
-  right: 2.5rem;
-  top: 80px;
-  height: 0;
-  overflow: hidden;
-}
-
-.dropdown_menu.open {
-  height: 240px;
-}
-
-.dropdown_menu li {
-  padding: 0.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .navbar .nav-items {
+    position: absolute;
+    padding-bottom: 0.1rem;
+    width: 100%;
+    border-radius: 1rem;
+    background: #c499f3;
     display: none;
-  }
-
-  .navbar .toggle_btn {
-    display: block;
-  }
-
-  .dropdown_menu {
-    display: block;
-    left: 2rem;
-    width: unset;
-    font-weight: 500;
+    text-align: center;
+    top: 100%;
+    right: 50%;
+    transform: translate(50%);
+    z-index: 99;
   }
 }
-
-@media (max-width: 576px) {
-  .dropdown_menu {
-    left: 2rem;
-    width: unset;
+@media only screen and (max-width: 1023px) {
+  .navbar .nav-items .button {
+    all: unset;
+    cursor: pointer;
+  }
+  .navbar .nav-items .button:hover {
+    color: #6e07f3;
+  }
+}
+.navbar .hamburger svg path {
+  transition: opacity 0.1s linear, transform 0.2s linear;
+}
+.navbar .hamburger svg path:last-child {
+  transform-origin: bottom left;
+}
+.navbar .hamburger.open svg path:first-child {
+  transform: rotate(45deg) translate(10px, -10px);
+  transform-origin: top left;
+}
+.navbar .hamburger.open svg path:nth-child(2) {
+  opacity: 0;
+}
+.navbar .hamburger.open svg path:last-child {
+  transform: rotate(-45deg) translate(10px, 10px);
+}
+.navbar .hamburger svg {
+  display: block;
+  height: 1.2rem;
+  transition: fill 0.1s linear;
+}
+.navbar .hamburger svg:hover {
+  fill: #6e07f3;
+}
+@media only screen and (min-width: 1023px) {
+  .navbar .hamburger {
+    display: none;
   }
 }
 
 /* Hero computer image */
-
 img.is-bottom {
   max-width: 100%;
   display: block;
@@ -172,9 +177,7 @@ img.is-bottom {
     max-width: 100%;
   }
 }
-
 /* Hero main description and image */
-
 section#hero {
   display: flex;
   flex-direction: column;
@@ -221,18 +224,14 @@ h2 {
   .hero-body {
     padding: 3rem 3rem;
   }
-
   h1 {
     font-size: 2rem;
   }
-
   h2 {
     font-size: 1.3rem;
   }
 }
-
 /* About */
-
 .about {
   background-color: #6e07f3;
   color: white;
@@ -253,7 +252,6 @@ h2 {
 }
 
 /* Skills */
-
 .skills {
   margin-bottom: 7rem;
 }
@@ -320,16 +318,13 @@ h2 {
   .skills-wrapper {
     flex-direction: column;
   }
-
   .skills-content:nth-child(2) {
     border: unset;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 }
-
 /* Portfolio */
-
 .portfolio {
   text-align: center;
 }
@@ -379,7 +374,8 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .portfolio-card:hover img {
@@ -436,25 +432,20 @@ h2 {
   .portfolio-cards {
     flex-wrap: wrap;
   }
-
   .portfolio-card {
     width: calc(50% - 1rem);
   }
 }
-
 @media (max-width: 767px) {
   .portfolio-cards {
     flex-direction: column;
   }
-
   .portfolio-card {
     width: 100%;
     font-weight: 200;
   }
 }
-
 /* Footer */
-
 .footer {
   text-align: center;
   background-color: #6e07f3;
@@ -469,6 +460,11 @@ h2 {
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
   margin: 2rem auto;
+}
+
+.footer > .container > .button:hover {
+  background: #fff;
+  box-shadow: 2px 1000px 1px #fff inset !important;
 }
 
 .social-icons {
@@ -496,3 +492,18 @@ h2 {
 .social-icons .icon:hover {
   background: #fff;
 }
+
+.social-icons .icon svg path,
+.social-icons .icon svg rect {
+  transition: fill 0.2s linear, stroke 0.2s linear;
+}
+
+.social-icons .icon:hover svg path {
+  fill: #6e07f3;
+}
+
+.social-icons .icon:last-child:hover svg rect,
+.social-icons .icon:last-child:hover svg path {
+  stroke: #6e07f3;
+  fill: unset;
+}/*# sourceMappingURL=styles.css.map */
