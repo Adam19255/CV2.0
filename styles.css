@@ -67,6 +67,9 @@ a {
 a:hover {
   color: #6e07f3;
 }
+a:hover svg path {
+  stroke: #6e07f3;
+}
 
 li {
   list-style: none;
@@ -125,15 +128,23 @@ header {
   align-items: center;
   gap: 2rem;
 }
+.navbar .nav-items svg {
+  height: 2rem;
+  width: 2rem;
+}
+.navbar .nav-items svg path {
+  transition: stroke 0.2s linear;
+}
 @media only screen and (max-width: 1023px) {
   .navbar .nav-items {
     position: absolute;
     padding-bottom: 0.1rem;
     width: 100%;
     border-radius: 1rem;
-    background: #c499f3;
+    background: #eef5ff;
     display: none;
     text-align: center;
+    font-size: 1.5rem;
     top: 100%;
     right: 50%;
     transform: translate(50%);
@@ -220,7 +231,7 @@ header {
     font-size: 2rem;
   }
   .hero h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -239,6 +250,11 @@ header {
   display: inline-block;
   margin: 2rem auto 0;
   width: 60%;
+}
+@media only screen and (max-width: 1023px) {
+  .about p {
+    width: 80%;
+  }
 }
 
 .skills {
@@ -436,6 +452,11 @@ header {
   opacity: 0.8;
   font-size: 1.5rem;
 }
+@media only screen and (max-width: 767px) {
+  .footer p {
+    font-size: 1.1rem;
+  }
+}
 .footer .social-icons {
   display: flex;
   align-items: center;
@@ -469,4 +490,32 @@ header {
 .footer .social-icons svg path,
 .footer .social-icons svg rect {
   transition: fill 0.2s linear, stroke 0.2s linear;
+}
+
+.separator-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.separator-content .mail-box {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.separator-content .mail-box img {
+  height: 100%;
+  width: 100%;
+}
+.separator-content h1 {
+  font-size: 1.7rem;
+}
+
+.form .field textarea {
+  max-width: 100%;
+  min-width: 100%;
+  resize: vertical;
 }/*# sourceMappingURL=styles.css.map */

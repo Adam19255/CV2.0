@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fort Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400&family=Jura:wght@500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <section class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <a href="index.html"
+              ><img src="assets/A-letter.svg" alt="letter a"
+            /></a>
+          </div>
+          <a class="nav-items" href="index.html"
+            ><svg
+              width="800px"
+              height="800px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8L8 16M8.00001 8L16 16"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="separator">
+      <div class="container">
+        <div class="separator-content">
+          <div class="mail-box">
+            <img src="assets/mailbox.svg" alt="mail-box" />
+          </div>
+          <h1>
+            Thanks for taking the time to reach out. Lets make good things
+            happen!
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="from">
+      <div class="field">
+        <label class="label" for="name">Name</label>
+        <input class="input" name="name" type="text" required />
+      </div>
+
+      <div class="field">
+        <label class="label" for="email">Email</label>
+        <input class="input" name="email" type="text" required />
+      </div>
+
+      <div class="field">
+        <label class="label" for="message">Message</label>
+        <textarea name="message" rows="5" required></textarea>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
