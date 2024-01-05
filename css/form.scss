@@ -1,0 +1,96 @@
+.contact-form {
+  form {
+    width: 50%;
+    margin: 3rem auto 0;
+
+    @include tablet-mobile {
+      width: 100%;
+    }
+
+    .field-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      @include tablet-mobile {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+    .field {
+      width: 100%;
+      textarea,
+      input:not([type="submit"]) {
+        width: 100%;
+        resize: none;
+        border: 1px solid #e6ecf8;
+        color: #141c3a;
+        outline: 0;
+        font-size: 1.4rem;
+        border-radius: 0.3rem;
+        text-indent: 0.3rem;
+      }
+
+      input:not([type="submit"]) {
+        padding: 0.4rem 0;
+      }
+
+      label {
+        display: block;
+        font-family: "Jura", sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+        color: rgba(41, 51, 71, 0.8);
+      }
+    }
+    .button {
+      display: block;
+      margin: 2rem auto 0;
+      font-size: 1.3rem;
+      padding: 0.5rem 2.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16rem;
+  height: 16rem;
+  border: 3px solid #6e07f3;
+  background-color: #fff;
+  border-radius: 1rem;
+  z-index: 99;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  img {
+    width: 5rem;
+    height: 5rem;
+    padding-top: 2.5rem;
+  }
+
+  a {
+    display: block;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    height: 2rem;
+    width: 2rem;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

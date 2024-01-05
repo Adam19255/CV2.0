@@ -1,0 +1,69 @@
+.skills {
+  margin-bottom: 7rem;
+
+  &-wrapper {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
+    margin-top: -10rem;
+
+    @include tablet-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &-content {
+    padding: 2rem 1rem;
+    color: #141c3a;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    &:nth-child(2) {
+      border-left: 1px solid rgba(0, 0, 0, 0.2);
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+      @include tablet-mobile {
+        border: unset;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      }
+    }
+    .content-image {
+      width: 6rem;
+      height: 6rem;
+      padding: 0.8rem;
+      background-color: #5be9b9;
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .content-title {
+      font-family: "Jura", sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #141c3a;
+      margin-bottom: 1rem;
+    }
+
+    .content-subtitle {
+      margin-bottom: 1rem;
+      color: #6e07f3;
+    }
+
+    .title-description {
+      margin-bottom: 2rem;
+    }
+  }
+}

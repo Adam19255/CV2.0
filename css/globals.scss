@@ -1,0 +1,93 @@
+.overlay {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 9;
+  transition: opacity 0.2s linear;
+  &.darken {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Jura", sans-serif;
+  font-size: 3rem;
+  color: #141c3a;
+  margin: 0;
+}
+
+h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+p {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+ul {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s linear;
+  &:hover {
+    color: #6e07f3;
+    svg path {
+      stroke: #6e07f3;
+    }
+  }
+}
+
+li {
+  list-style: none;
+  line-height: 1.5;
+}
+
+.button {
+  display: inline-block;
+  border: 2px solid transparent;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(120deg, #ee55dc, #9c5bf1, #6e07f3);
+  background-origin: border-box;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 2px 1000px 1px #f1f3fa inset;
+    color: #000;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}

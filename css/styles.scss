@@ -1,0 +1,24 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+
+@import "mixin";
+@import "globals";
+@import "header";
+@import "hero";
+@import "about";
+@import "skills";
+@import "portfolio";
+@import "footer";
+@import "separator";
+@import "form";

@@ -1,0 +1,22 @@
+.about {
+  background-color: #6e07f3;
+  color: white;
+  text-align: center;
+  display: block;
+  padding: 5rem 0 15rem;
+
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+
+  p {
+    display: inline-block;
+    margin: 2rem auto 0;
+    width: 60%;
+
+    @include tablet-mobile() {
+      width: 80%;
+    }
+  }
+}
