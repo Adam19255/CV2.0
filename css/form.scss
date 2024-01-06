@@ -20,6 +20,9 @@
     }
     .field {
       width: 100%;
+      textarea {
+        height: 15.33rem;
+      }
       textarea,
       input:not([type="submit"]) {
         width: 100%;

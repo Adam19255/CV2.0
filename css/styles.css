@@ -547,6 +547,9 @@ footer .social-icons svg rect {
 .contact-form form .field {
   width: 100%;
 }
+.contact-form form .field textarea {
+  height: 15.33rem;
+}
 .contact-form form .field textarea,
 .contact-form form .field input:not([type=submit]) {
   width: 100%;
