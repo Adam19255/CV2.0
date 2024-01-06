@@ -33,7 +33,7 @@
 
   @include only-mobile {
     .hero-body {
-      padding: 3rem 3rem;
+      padding: 3rem 3rem 0;
     }
 
     h1 {
