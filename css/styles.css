@@ -104,7 +104,6 @@ li {
 
 header {
   position: relative;
-  padding: 0 2rem;
 }
 header.line {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
