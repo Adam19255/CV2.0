@@ -1,9 +1,10 @@
 .portfolio {
   text-align: center;
+  margin-bottom: 2rem;
 
   & > .container > .button {
     display: inline-block;
-    margin: 2rem auto;
+    margin-top: 2rem;
   }
 
   .title {
@@ -51,13 +52,15 @@
       width: 100%;
       font-weight: 200;
     }
+    &:hover,
+    &:focus-within {
+      img {
+        scale: 1.2;
+      }
 
-    &:hover img {
-      scale: 1.2;
-    }
-
-    &:hover .image-wrapper .card-overlay {
-      opacity: 1;
+      .image-wrapper .card-overlay {
+        opacity: 1;
+      }
     }
 
     a {

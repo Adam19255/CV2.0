@@ -15,8 +15,6 @@
     <title>Contact Me</title>
   </head>
   <body>
-    <div class="overlay"></div>
-
     <header class="line">
       <div class="container">
         <div class="navbar">
@@ -29,67 +27,67 @@
         </div>
       </div>
     </header>
-
-    <section class="separator">
-      <div class="container">
-        <div class="separator-content">
-          <div class="image-wrapper">
-            <img src="assets/mailbox.svg" alt="mail-box" />
+    <main>
+      <section class="separator">
+        <div class="container">
+          <div class="separator-content">
+            <div class="image-wrapper">
+              <img src="assets/mailbox.svg" alt="mail-box" />
+            </div>
+            <h1>
+              Thanks for taking the time to reach out. Lets make good things
+              happen!
+            </h1>
           </div>
-          <h1>
-            Thanks for taking the time to reach out. Lets make good things
-            happen!
-          </h1>
         </div>
-      </div>
-    </section>
-    <section class="contact-form">
-      <div class="container">
-        <form action="" method="POST" id="contact-form">
-          <div class="field-wrap">
-            <div class="field">
-              <label for="in_name">Name</label>
-              <input name="in_name" type="text" required />
+      </section>
+      <section class="contact-form">
+        <div class="container">
+          <form action="" method="POST" id="contact-form">
+            <div class="field-wrap">
+              <div class="field">
+                <label for="in_name">Name</label>
+                <input name="in_name" type="text" id="in_name" required />
+              </div>
+
+              <div class="field">
+                <label for="in_email">Email</label>
+                <input name="in_email" type="text" id="in_email" required />
+              </div>
             </div>
 
             <div class="field">
-              <label for="in_email">Email</label>
-              <input name="in_email" type="text" required />
+              <label for="in_message">Message</label>
+              <textarea name="in_message" id="in_message" required></textarea>
+            </div>
+            <input class="button" type="submit" value="Submit" />
+          </form>
+          <div class="popup">
+            <div class="popup-content">
+              <a href="#"
+                ><svg
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16 8L8 16M8.00001 8L16 16"
+                    stroke="#000000"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <img src="assets/awkward.svg" alt="awkward face" />
+              <h2>Sorry this feature is not available yet.</h2>
             </div>
           </div>
-
-          <div class="field">
-            <label for="in_message">Message</label>
-            <textarea name="in_message" rows="5" required></textarea>
-          </div>
-          <input class="button" type="submit" value="Submit" />
-        </form>
-        <div class="popup">
-          <div class="popup-content">
-            <a href="#"
-              ><svg
-                width="800px"
-                height="800px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16 8L8 16M8.00001 8L16 16"
-                  stroke="#000000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            <img src="assets/awkward.svg" alt="awkward face" />
-            <h2>Sorry this feature is not available yet.</h2>
-          </div>
         </div>
-      </div>
-    </section>
-
+      </section>
+    </main>
     <footer id="footer">
       <div class="container">
         <p>
@@ -194,6 +192,7 @@
         </div>
       </div>
     </footer>
+    <div class="overlay"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>
   </body>

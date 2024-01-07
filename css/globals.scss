@@ -49,11 +49,9 @@ a {
   text-decoration: none;
   color: black;
   transition: color 0.2s linear;
-  &:hover {
+  &:hover,
+  &:focus {
     color: #6e07f3;
-    svg path {
-      stroke: #6e07f3;
-    }
   }
 }
 
@@ -80,7 +78,8 @@ li {
   cursor: pointer;
   transition: all 0.3s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 2px 1000px 1px #f1f3fa inset;
     color: #000;
   }

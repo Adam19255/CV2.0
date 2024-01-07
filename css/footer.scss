@@ -12,7 +12,8 @@ footer {
     border: 2px solid rgba(255, 255, 255, 0.5);
     margin: 2rem auto;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: #fff;
       box-shadow: 2px 1000px 1px #fff inset !important;
     }
@@ -42,7 +43,8 @@ footer {
       margin: 0 0.5rem;
       transition: all 0.2s linear;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background: #fff;
 
         svg path {
@@ -50,7 +52,8 @@ footer {
         }
       }
 
-      &:last-child:hover {
+      &:last-child:hover,
+      &:last-child:focus {
         svg path,
         svg rect {
           stroke: #6e07f3;

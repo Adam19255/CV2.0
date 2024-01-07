@@ -1,5 +1,5 @@
 .skills {
-  margin-bottom: 7rem;
+  margin: -10rem 0 7rem;
 
   &-wrapper {
     margin: 0;
@@ -11,7 +11,6 @@
     border-radius: 1rem;
     text-align: center;
     box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
-    margin-top: -10rem;
 
     @include tablet-mobile {
       flex-direction: column;

@@ -6,6 +6,10 @@ html {
   font-size: 18px;
   scroll-behavior: smooth;
 }
+html.disable-scroll {
+  height: 100%;
+  overflow: hidden;
+}
 
 body {
   position: relative;
@@ -64,11 +68,8 @@ a {
   color: black;
   transition: color 0.2s linear;
 }
-a:hover {
+a:hover, a:focus {
   color: #6e07f3;
-}
-a:hover svg path {
-  stroke: #6e07f3;
 }
 
 li {
@@ -90,7 +91,7 @@ li {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button:hover {
+.button:hover, .button:focus {
   box-shadow: 2px 1000px 1px #f1f3fa inset;
   color: #000;
 }
@@ -113,7 +114,7 @@ header .logo a {
   display: block;
   transition: transform 0.2s linear;
 }
-header .logo a:hover {
+header .logo a:hover, header .logo a:focus {
   transform: scale(1.1);
 }
 header .logo a img {
@@ -253,7 +254,7 @@ header .navbar .hamburger svg:hover {
 }
 
 .skills {
-  margin-bottom: 7rem;
+  margin: -10rem 0 7rem;
 }
 .skills-wrapper {
   margin: 0;
@@ -265,7 +266,6 @@ header .navbar .hamburger svg:hover {
   border-radius: 1rem;
   text-align: center;
   box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
-  margin-top: -10rem;
 }
 @media only screen and (max-width: 1023px) {
   .skills-wrapper {
@@ -320,10 +320,11 @@ header .navbar .hamburger svg:hover {
 
 .portfolio {
   text-align: center;
+  margin-bottom: 2rem;
 }
 .portfolio > .container > .button {
   display: inline-block;
-  margin: 2rem auto;
+  margin-top: 2rem;
 }
 .portfolio .title {
   display: flex;
@@ -372,10 +373,10 @@ header .navbar .hamburger svg:hover {
     font-weight: 200;
   }
 }
-.portfolio-card:hover img {
+.portfolio-card:hover img, .portfolio-card:focus-within img {
   scale: 1.2;
 }
-.portfolio-card:hover .image-wrapper .card-overlay {
+.portfolio-card:hover .image-wrapper .card-overlay, .portfolio-card:focus-within .image-wrapper .card-overlay {
   opacity: 1;
 }
 .portfolio-card a {
@@ -439,7 +440,7 @@ footer > .container > .button {
   border: 2px solid rgba(255, 255, 255, 0.5);
   margin: 2rem auto;
 }
-footer > .container > .button:hover {
+footer > .container > .button:hover, footer > .container > .button:focus {
   background: #fff;
   box-shadow: 2px 1000px 1px #fff inset !important;
 }
@@ -467,14 +468,15 @@ footer .social-icons .icon {
   margin: 0 0.5rem;
   transition: all 0.2s linear;
 }
-footer .social-icons .icon:hover {
+footer .social-icons .icon:hover, footer .social-icons .icon:focus {
   background: #fff;
 }
-footer .social-icons .icon:hover svg path {
+footer .social-icons .icon:hover svg path, footer .social-icons .icon:focus svg path {
   fill: #6e07f3;
 }
 footer .social-icons .icon:last-child:hover svg path,
-footer .social-icons .icon:last-child:hover svg rect {
+footer .social-icons .icon:last-child:hover svg rect, footer .social-icons .icon:last-child:focus svg path,
+footer .social-icons .icon:last-child:focus svg rect {
   stroke: #6e07f3;
   fill: unset;
 }
@@ -523,6 +525,9 @@ footer .social-icons svg rect {
   }
 }
 
+.contact-form {
+  margin: 6rem 0;
+}
 .contact-form form {
   width: 50%;
   margin: 3rem auto 0;
@@ -548,7 +553,8 @@ footer .social-icons svg rect {
   width: 100%;
 }
 .contact-form form .field textarea {
-  height: 15.33rem;
+  height: 12rem;
+  padding-top: 0.4rem;
 }
 .contact-form form .field textarea,
 .contact-form form .field input:not([type=submit]) {
@@ -559,7 +565,7 @@ footer .social-icons svg rect {
   outline: 0;
   font-size: 1.4rem;
   border-radius: 0.3rem;
-  text-indent: 0.3rem;
+  text-indent: 0.4rem;
 }
 .contact-form form .field input:not([type=submit]) {
   padding: 0.4rem 0;
@@ -576,7 +582,6 @@ footer .social-icons svg rect {
   margin: 2rem auto 0;
   font-size: 1.3rem;
   padding: 0.5rem 2.5rem;
-  margin-bottom: 3rem;
 }
 
 .popup {

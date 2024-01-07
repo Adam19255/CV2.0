@@ -1,9 +1,8 @@
 $(".hamburger").on("click", function (e) {
-  console.log("hotdog");
   // prevents default behavior of the element
   e.preventDefault();
   $(this).toggleClass("open");
-
+  $("html").addClass("disable-scroll");
   $(".nav-items").slideToggle();
   $(".overlay").toggleClass("darken");
 });
@@ -44,6 +43,7 @@ $(document).on("keydown", function (e) {
 });
 
 function closeNavbar() {
+  $("html").removeClass("disable-scroll");
   $(".hamburger").removeClass("open");
   $(".nav-items").slideUp();
   $(".overlay").removeClass("darken");

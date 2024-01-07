@@ -50,11 +50,8 @@ a {
   color: black;
   transition: color 0.2s linear;
 }
-a:hover {
+a:hover, a:focus {
   color: #6e07f3;
-}
-a:hover svg path {
-  stroke: #6e07f3;
 }
 
 li {
@@ -76,7 +73,7 @@ li {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button:hover {
+.button:hover, .button:focus {
   box-shadow: 2px 1000px 1px #f1f3fa inset;
   color: #000;
 }
