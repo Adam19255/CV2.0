@@ -8,7 +8,7 @@ $(".hamburger").on("click", function (e) {
 });
 
 $(".nav-items li a, .overlay").on("click", function (e) {
-  if (windowSize() < 1023 && $(".nav-items").length > 0) {
+  if (windowSize() < 1023 && $(".nav-items li a").length > 0) {
     closeNavbar();
   }
 });

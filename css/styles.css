@@ -120,6 +120,9 @@ header .logo a:hover, header .logo a:focus {
 header .logo a img {
   height: 2rem;
 }
+header .nav-home {
+  display: block;
+}
 header .navbar {
   position: relative;
   display: flex;
