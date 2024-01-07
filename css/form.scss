@@ -62,7 +62,7 @@
 
 .popup {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -79,6 +79,7 @@
     align-items: center;
     text-align: center;
     gap: 1rem;
+    height: 100%;
   }
 
   img {
