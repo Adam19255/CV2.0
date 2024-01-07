@@ -554,7 +554,7 @@ footer .social-icons svg rect {
 }
 .contact-form form .field textarea {
   height: 12rem;
-  padding-top: 0.4rem;
+  padding: 0.4rem;
 }
 .contact-form form .field textarea,
 .contact-form form .field input:not([type=submit]) {
