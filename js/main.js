@@ -24,17 +24,18 @@ $(window).on("resize", function (e) {
 });
 
 $("#contact-form").on("submit", function (e) {
+  $("html, body").remove();
   e.preventDefault();
   $("html").addClass("disable-scroll");
   $(".popup").fadeIn();
   $(".overlay").addClass("darken");
 });
 
-// $(".popup-content a, .overlay").on("click", function (e) {
-//   $(".popup").fadeOut();
-//   $("html").removeClass("disable-scroll");
-//   $(".overlay").removeClass("darken");
-// });
+$(".popup-content a, .overlay").on("click", function (e) {
+  $(".popup").fadeOut();
+  $("html").removeClass("disable-scroll");
+  $(".overlay").removeClass("darken");
+});
 
 $(document).on("keydown", function (e) {
   // exit of Escape keypress
