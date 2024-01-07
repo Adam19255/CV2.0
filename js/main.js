@@ -13,15 +13,17 @@ $(".nav-items li a, .overlay").on("click", function (e) {
   }
 });
 
-// $(window).on("resize", function (e) {
-//   if (windowSize() > 1023) {
-//     $(".nav-items").addClass("flex");
-//   } else {
-//     $(".nav-items").removeClass("flex");
-//     $(".nav-items").hide();
-//     closeNavbar();
-//   }
-// });
+$(window).on("resize", function (e) {
+  if (!$(".popup").length > 0) {
+    if (windowSize() > 1023) {
+      $(".nav-items").addClass("flex");
+    } else {
+      $(".nav-items").removeClass("flex");
+      $(".nav-items").hide();
+      closeNavbar();
+    }
+  }
+});
 
 $("#contact-form").on("submit", function (e) {
   e.preventDefault();
