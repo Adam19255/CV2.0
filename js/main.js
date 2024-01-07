@@ -7,11 +7,11 @@ $(".hamburger").on("click", function (e) {
   $(".overlay").addClass("darken");
 });
 
-// $(".nav-items li a, .overlay").on("click", function (e) {
-//   if (windowSize() < 1023) {
-//     closeNavbar();
-//   }
-// });
+$(".nav-items li a, .overlay").on("click", function (e) {
+  if (windowSize() < 1023 && $(".nav-items").length > 0) {
+    closeNavbar();
+  }
+});
 
 $(window).on("resize", function (e) {
   if (windowSize() > 1023) {
@@ -37,7 +37,7 @@ $(".popup-content a, .overlay").on("click", function (e) {
 });
 
 $(document).on("keydown", function (e) {
-  // exit of Escape keypress
+  // exit on Escape keypress
   if (e.keyCode === 27) {
     $(".popup").fadeOut();
     $("html").removeClass("disable-scroll");
