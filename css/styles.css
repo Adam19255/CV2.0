@@ -554,7 +554,6 @@ footer .social-icons svg rect {
 }
 .contact-form form .field textarea {
   height: 12rem;
-  padding: 0.4rem;
 }
 .contact-form form .field textarea,
 .contact-form form .field input:not([type=submit]) {
@@ -563,12 +562,11 @@ footer .social-icons svg rect {
   border: 1px solid #e6ecf8;
   color: #141c3a;
   outline: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   font-size: 1.4rem;
   border-radius: 0.3rem;
-  text-indent: 0.4rem;
-}
-.contact-form form .field input:not([type=submit]) {
-  padding: 0.4rem 0;
+  padding: 0.4rem;
 }
 .contact-form form .field label {
   display: block;
